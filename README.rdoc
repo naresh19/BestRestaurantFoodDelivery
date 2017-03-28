@@ -1,0 +1,124 @@
+An object oriented program in ruby that helps a food delivery app to deliver its customers at the best price.
+I have written 4 classes Restaurant , Menu, MenuItem and Order each in file restaurant.rb , menu.rb, menu_item.rb and order.rb  . It takes looks for menu.csv and restaurants.csv in the same directory as the file containing code to get te neccessary data to find the ebstaurant for an order.
+
+Tu run from console : 
+ruby order.rb (which will call Order.excute)
+It will take 3 inputs
+	1. Name of restaurant csv 
+	2. Name of menu csv
+	(by default it take restaurants.csv and menu.csv) and 
+	3. list of items(comma separated)
+It will output an array with restaurant id and minimum cost and in case of no restaurant is found it returns [-1,-1].
+
+To Find best restaurant , 
+call Order.find_best_restaurant items_list (in order.rb)
+	where item_list is an array of items ordered
+	for ex: ["tofu_log","fancy_european_water"]
+examples : 
+Order.find_best_restaurant ["fancy_european_water","extreme_fajita","jalapeno_poppers"] 
+Order.find_best_restaurant ["burger", "tofu_log"]
+Order.find_best_restaurant ["tofu_log","fancy_european_water"]
+
+
+
+I have also few test cases in order.rb, to run these comment line Order.execute and uncomment test cases.
+
+
+
+
+Problem Statement
+Write an object oriented program that helps a food delivery app to deliver its customers at the best price.
+
+Instructions:
+
+­ No web UI or database storage is expected.
+
+­ A cleanly structured, object oriented ruby program is sufficient.
+
+­ We appreciate ruby tests that validate the correctness of the code (not mandatory).
+
+­ Please include a README file explaining how to run the code.
+
+Problem description :
+
+Foodly is an imaginary food delivery app that delivers food to the customers at their home from the list of
+
+restaurants whose list and menu are maintained in it’s catalog. It charges different amounts for the
+
+delivery depending on the restaurant. List of the restaurants and delivery charges are stored in a csv
+
+called ‘restaurants.csv’. Each restaurant has an id by which it is identified uniquely. The menu of all
+
+restuarants is aggregated and saved in a csv called ‘menu.csv’. Menu may contain individual items and
+
+also combos. When a customer calls foodly and orders for some items, it finds the best restaurant from
+
+which it can deliver all the items ordered by the customer and delivers it. The best restaurant is the one
+
+which has all the items ordered by the customer and the prices + delivery charges add upto the
+
+minimum.
+
+Now, your program should take one inputs ­ First is the list of items in order and output of your program
+
+is ­ total best bill amount of the ordered items (including delivery charges) and the restaurant id that
+
+offers this best total price.
+
+Here are some sample data sets, program inputs, and the expected output:
+
+Sample Restaurant's data ­ (restaurants.csv)
+
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
+
+restuarant_id, delivery_charges
+
+1, 10.00
+
+2, 5.00
+
+3, 30.00
+
+4, 20.00
+
+5, 10.00
+
+6, 7.00
+
+Sample Menu data ­ (menu.csv)
+
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
+
+restuarant_id, price, item
+
+1, 4.00, burger
+
+1, 6.00, tofu_log
+
+2, 5.00, burger
+
+2, 6.50, tofu_log
+
+3, 4.00, chef_salad
+
+3, 8.00, steak_salad_sandwich
+
+4, 5.00, steak_salad_sandwich
+
+4, 2.50, wine_spritzer
+
+5, 4.00, extreme_fajita
+
+5, 8.00, fancy_european_water
+
+6, 5.00, fancy_european_water
+
+6, 6.00, extreme_fajita, jalapeno_poppers, extra_salsa
+
+
+
+
+
+
+
+
