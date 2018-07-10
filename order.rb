@@ -32,7 +32,7 @@ class Order
     menu_csv = gets.chomp.strip
     menu_csv = 'menu.csv' if menu_csv.empty?
 
-    DataLoader.load_restaurants_and_menu(rst_csv, menu_csv) rescue abort 'Could not read csv files. Aborting!'
+    DataLoader.load_restaurants_and_menu(rst_csv, menu_csv)
 
     puts 'Enter Items to be Ordered (comma separated)'
     item_list = gets.chomp.split(',').map(&:strip).uniq
@@ -40,8 +40,14 @@ class Order
     abort 'Please enter atleast 1 item. Aborting!' if item_list.empty?
 
     puts 'Best Price and Restaurant Combo is'
+    st = Time.now
     puts Order.find_best_restaurant item_list
-
+    et = Time.now
+    puts (et -st) * 1000
+    st = Time.now
+    puts Store.find_best_price item_list
+    et = Time.now
+    puts (et - st) * 1000
   end
 
 end
