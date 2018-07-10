@@ -32,7 +32,7 @@ class Order
     menu_csv = gets.chomp.strip
     menu_csv = 'menu.csv' if menu_csv.empty?
 
-    DataLoader.load_restaurants_and_menu(rst_csv, menu_csv)
+    DataLoader.load_restaurants_and_menu(rst_csv, menu_csv) rescue abort 'Could not read csv files. Aborting!'
 
     puts 'Enter Items to be Ordered (comma separated)'
     item_list = gets.chomp.split(',').map(&:strip).uniq
