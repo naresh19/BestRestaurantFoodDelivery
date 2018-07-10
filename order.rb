@@ -43,11 +43,11 @@ class Order
     st = Time.now
     puts Order.find_best_restaurant item_list
     et = Time.now
-    puts (et -st) * 1000
+    puts "Time with old algo = ", (et - st) * 1000
     st = Time.now
     puts Store.find_best_price item_list
     et = Time.now
-    puts (et - st) * 1000
+    puts "Time with store = ", (et - st) * 1000
   end
 
 end
