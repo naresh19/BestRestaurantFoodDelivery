@@ -123,10 +123,13 @@ Best Price and Restaurant Combo is
 6
 13.0
 Time with old algo =
-0.159
+0.15100000000000002
+Best Price and Restaurant Combo is
 13
+6
 Time with store =
-0.024
+0.034
+
 
 
 

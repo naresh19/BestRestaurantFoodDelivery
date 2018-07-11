@@ -31,9 +31,9 @@ class Store
     end
 
     if @@orders.key?(decimal_number)
-      @@orders[decimal_number] << price.to_i + @@restaurant_delivery_charges[restaurant_id.to_i]
+      @@orders[decimal_number] << [price.to_i + @@restaurant_delivery_charges[restaurant_id.to_i], restaurant_id]
     else
-      @@orders[decimal_number] = [price.to_i + @@restaurant_delivery_charges[restaurant_id.to_i]]
+      @@orders[decimal_number] = [[price.to_i + @@restaurant_delivery_charges[restaurant_id.to_i], restaurant_id]]
     end
   end
 
@@ -52,6 +52,7 @@ class Store
         solutions << v
       end
     end
-    solutions.min
+    solutions.sort {|a, b| a[0] <=> b[0]}
+    solutions[0]
   end
 end

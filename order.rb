@@ -45,6 +45,7 @@ class Order
     et = Time.now
     puts "Time with old algo = ", (et - st) * 1000
     st = Time.now
+    puts 'Best Price and Restaurant Combo is'
     puts Store.find_best_price item_list
     et = Time.now
     puts "Time with store = ", (et - st) * 1000
