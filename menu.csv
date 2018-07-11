@@ -13,3 +13,5 @@ restuarant_id, price, item
 5,8,fancy_european_water
 6,5,fancy_european_water
 6,6,"extreme_fajita, jalapeno_poppers, extra_salsa"
+6,8,"jalapeno_poppers"
+6,1,"extreme_fajita, jalapeno_poppers, fancy_european_water"
