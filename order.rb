@@ -65,5 +65,8 @@ Order.execute
 # p Order.find_best_restaurant ["tofu_log"]
 # p Order.find_best_restaurant ["tofu_log","fancy_european_water"]
 # p Order.find_best_restaurant ["extreme_fajita"]
-# p Order.find_best_restaurant ["jam_toast"]
+# p Order.find_best_restaurant ["extreme_fajita", "jalapeno_poppers", "fancy_european_water"]
+# p Order.find_best_restaurant ["a","c","d","b"]
 
+# item_list = "a,c,d,b".split(',').map(&:strip).uniq
+# p Store.find_best_price item_list
