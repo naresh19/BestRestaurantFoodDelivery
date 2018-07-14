@@ -120,15 +120,16 @@ restuarant_id, price, item
 Output-
 
 Enter Items to be Ordered (comma separated)
-extreme_fajita, jalapeno_poppers, fancy_european_water
+a,b,c,d
 Best Price and Restaurant Combo is
-6
-14.0
+4
+6.0
 Time with old algo =
-0.201
+0.214
 Best Price and Restaurant Combo is
-6
-8
+4
+5
 Time with store =
-0.10900000000000001
+0.747
+
 
