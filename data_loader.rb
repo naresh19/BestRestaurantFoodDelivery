@@ -2,6 +2,7 @@ require 'csv'
 
 require_relative 'restaurant'
 require_relative 'menu'
+require_relative 'store'
 
 module DataLoader
 
@@ -17,6 +18,7 @@ module DataLoader
     CSV.foreach(csv_file_path, headers: true) do |row|
       rst = Restaurant.new(id: row[0], delivery_charge: row[1])
       Restaurant.populate rst
+      Store.keep_restaurant_info(row[0], row[1].to_i)
     end
   end
 
@@ -28,6 +30,7 @@ module DataLoader
       next if restaurant.nil? # skip menu items which do not have valid restaurant_id
       menu_item = MenuItem.new(item: row[2], price: row[1])
       restaurant.menu.add_item menu_item
+      Store.process(row[0], row[1], row[2])
     end
   end
 end

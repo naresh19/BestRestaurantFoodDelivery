@@ -117,8 +117,19 @@ restuarant_id, price, item
 
 
 
+Output-
 
-
-
+Enter Items to be Ordered (comma separated)
+a,b,c,d
+Best Price and Restaurant Combo is
+4
+6.0
+Time with old algo =
+0.214
+Best Price and Restaurant Combo is
+4
+5
+Time with store =
+0.747
 
 

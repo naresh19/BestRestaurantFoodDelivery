@@ -40,8 +40,15 @@ class Order
     abort 'Please enter atleast 1 item. Aborting!' if item_list.empty?
 
     puts 'Best Price and Restaurant Combo is'
+    st = Time.now
     puts Order.find_best_restaurant item_list
-
+    et = Time.now
+    puts "Time with old algo = ", (et - st) * 1000
+    st = Time.now
+    puts 'Best Price and Restaurant Combo is'
+    puts Store.find_best_price item_list
+    et = Time.now
+    puts "Time with store = ", (et - st) * 1000
   end
 
 end
@@ -58,5 +65,8 @@ Order.execute
 # p Order.find_best_restaurant ["tofu_log"]
 # p Order.find_best_restaurant ["tofu_log","fancy_european_water"]
 # p Order.find_best_restaurant ["extreme_fajita"]
-# p Order.find_best_restaurant ["jam_toast"]
+# p Order.find_best_restaurant ["extreme_fajita", "jalapeno_poppers", "fancy_european_water"]
+# p Order.find_best_restaurant ["a","c","d","b"]
 
+# item_list = "a,c,d,b".split(',').map(&:strip).uniq
+# p Store.find_best_price item_list

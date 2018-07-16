@@ -1,15 +1,13 @@
 restuarant_id, price, item
-1,4,burger
-1,6,tofu_log
-2,5,burger
-2,6.5,tofu_log
-2,4,fancy_european_water
-2,5,"fancy_european_water,as"
-3,4,chef_salad
-3,8,steak_salad_sandwich
-4,5,steak_salad_sandwich
-4,2.5,wine_spritzer
-5,4,extreme_fajita
-5,8,fancy_european_water
-6,5,fancy_european_water
-6,6,"extreme_fajita, jalapeno_poppers, extra_salsa"
+1,10,"b,a"
+1,20,"c,d"
+2,30,"a,b,c,d"
+3,20,"c,b,a"
+4,1,"c"
+4,1,"a"
+4,1,"d"
+4,1,"b"
+4,1,"d,c"
+4,0,"a,b,c"
+4,0,"b,c,d"
+
